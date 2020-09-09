@@ -3,40 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f89e49d-e095-48b4-9188-3240d9a1724b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/checkUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/checkUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/configUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/configUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/dataUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dataUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/excelUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/excelUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/requestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/requestUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009070928.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009070932.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009070938.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009070943.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009070947.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071439.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071440.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071542.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071734.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071736.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071742.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071745.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071747.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071748.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071749.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009071753.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.0/万应工厂自动化测试报告V1.0.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.0/万应工厂自动化测试报告V1.0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.1/万应工厂自动化测试报告V1.1.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.1/万应工厂自动化测试报告V1.1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.2/万应工厂自动化测试报告V1.2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.3/万应工厂自动化测试报告V1.3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.4/万应工厂自动化测试报告V1.4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.5/万应工厂自动化测试报告V1.5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.6/万应工厂自动化测试报告V1.6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case/testbase.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/testbase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case_data/testCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test_case_data/testCase.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcode/exchangeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcode/exchangeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcode/sendrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcode/sendrequest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +34,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -242,7 +208,16 @@
       <workItem from="1599552139605" duration="6521000" />
       <workItem from="1599623546132" duration="1188000" />
       <workItem from="1599631609445" duration="8931000" />
+      <workItem from="1599641515957" duration="598000" />
     </task>
+    <task id="LOCAL-00001" summary="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息">
+      <created>1599641738448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599641738448</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +227,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/web_auto_test" />
     </ignored-roots>
+    <MESSAGE value="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="79" key="#Options" timestamp="1595295524890">
@@ -274,10 +251,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1594806299328" />
-    <state x="385" y="15" key="CommitChangelistDialog2" timestamp="1599549462831">
+    <state x="385" y="15" key="CommitChangelistDialog2" timestamp="1599641735821">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1599549462831" />
+    <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1599641735821" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1595302022397">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -314,10 +291,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="114" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599559965781" />
-    <state x="58" y="66" key="SettingsEditor" timestamp="1599534125041">
+    <state x="58" y="66" key="SettingsEditor" timestamp="1599642226612">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="58" y="66" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599534125041" />
+    <state x="58" y="66" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599642226612" />
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1599642259161">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599642259161" />
     <state x="346" y="35" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594365924535">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

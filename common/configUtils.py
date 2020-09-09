@@ -14,7 +14,7 @@ class ReadConfig:
         try:
             self.config = configparser.ConfigParser()
             self.config.read(self.file_name, encoding='utf-8')
-            # log.info('打开文件:' + self.file_name + '成功！')
+            log.info('打开文件:' + self.file_name + '成功！')
         except FileNotFoundError as e:
             log.error('未找到文件:' + self.file_name + '!')
 

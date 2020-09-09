@@ -10,15 +10,14 @@ from common.requestUtils import RequestUtils
 
 # module_name = input('请输入要执行测试的模块:\n')
 # evn_name = input('请输入测试环境：\n')
-stpe_info = ReadExcelUtils("Operation").get_data()
-# print(stpe_info)
-# print(type(stpe_info[0]['请求参数(post)']), stpe_info[0]['请求参数(post)'])
+stpe_info = ReadExcelUtils("CASE").get_data()
+re_login = RequestUtils()
+res_login = re_login.sendRequest(stpe_info[0])
+print(res_login)
 
-re_login = RequestUtils(sec='Operation', option='Test')
-res_login = re_login.sendRequest(stpe_info[3])
-app_id = re_login.sendRequest(stpe_info[4])
-code = re_login.sendRequest(stpe_info[5])
-print(re_login.temporary_variables)
+# app_id = re_login.sendRequest(stpe_info[7])
+# print(app_id)
+# print(re_login.temporary_variables)
 
 # url__variable_list = re.findall('\\${\w+}', stpe_info[0]['请求地址'])
 # print(url__variable_list)
@@ -28,23 +27,21 @@ print(re_login.temporary_variables)
 # appid = ReadConfig().getValue(sec="App", option="AppId")
 # appname = ReadConfig().getValue(sec="App", option="AppName")
 
-# data = ReadExcelUtils("Admin").get_data()
-# print(data[1]['请求参数'])
-# url = ReadConfig().getValue("Admin", "TEST") + data[1]['请求地址']
-# print(url)
-# headers = {
-#     "accept": "application/json, text/plain, */*",
-#     "accept-encoding": "gzip, deflate, br",
-#     "Content-Type": "application/json; charset=utf-8",
-#     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-#                   "Chrome/83.0.4103.116 Safari/537.36 ",
-#     "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ4MjY1NjMsImRhdGEiOnsiVXNlcklkIjoiZDljYTJmZGYtMGM3OS00ZmY4LThkNzQtYmQ2NDlhMTcxMjVjIiwiVXNlck5hbWUiOiIxODYyNzU5ODk5MSIsIk1vYmlsZSI6IjE4NjI3NTk4OTkxIiwiVGltZVN0YW1wIjoiMjg4NjcyOTcyOSIsIkRldmljZU5vIjpudWxsLCJBcHBJZCI6IjAxNWI0ZGE5LWQ4YzgtNDM3MC1iMjQ1LWJiOWZkN2RmY2I3MCIsIkFjY2Vzc1Rva2VuIjpudWxsLCJQZXJtaXNzaW9ucyI6W3siQXBwSWQiOiIwMTViNGRhOS1kOGM4LTQzNzAtYjI0NS1iYjlmZDdkZmNiNzAiLCJJZGVudGl0eSI6IkFkbWluIiwiUGVybWlzc2lvblZhbHVlIjpbIm9uZWluLmFwcHMuMDE1YjRkYTktZDhjOC00MzcwLWIyNDUtYmI5ZmQ3ZGZjYjcwLioiXX1dfX0.VZ06kK1pt01Ht8kPaMuqw0NSKr5N6KpIgH9rujsRvXk",
-#     "appid": "015b4da9-d8c8-4370-b245-bb9fd7dfcb70",
-#     "appname": "testapplication"
-# }
-#
-# res = requests.post(url=url, headers=headers, data=data[1]['请求参数'].encode("utf-8"))
-# print(res.text)
+
+# data = ReadExcelUtils("Operation").get_data()[0]
+# # data1 = ast.literal_eval(data.get('请求参数(post)'))
+# # url = ReadConfig().getValue("Operation", "TEST") + data.get('请求地址')
+# # print(url)
+# # headers = {
+# #     "accept": "application/json, text/plain, */*",
+# #     "accept-encoding": "gzip, deflate, br",
+# #     "Content-Type": "application/json; charset=utf-8",
+# #     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+# #                   "Chrome/83.0.4103.116 Safari/537.36 "
+# # }
+# # res = requests.post(url=url, headers=headers, json=data1)
+# # print(res.text)
+
 
 # data = ReadExcelUtils("Admin").get_data()
 # print(data[0]['请求参数'])
@@ -89,5 +86,3 @@ print(re_login.temporary_variables)
 #     value = re.findall(get_value_code_list[i], res.text)[-1]
 #     re_login.temporary_variables[transfer_value_variable_list[i]] = value
 # print(re_login.temporary_variables)
-
-

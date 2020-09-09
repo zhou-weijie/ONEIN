@@ -1,9 +1,5 @@
 import re
 import ast
-import requests
-from common.excelUtils import ReadExcelUtils
-from common.configUtils import ReadConfig
-
 
 
 class CheckUtils:
@@ -80,17 +76,17 @@ class CheckUtils:
             return self.fail_result
 
 
-if __name__ == "__main__":
-    step_info = ReadExcelUtils("Operation").get_data()[0]
-    headers = {
-            "Accept": "application/json, text/plain, */*",
-            "Accept-Encoding": "gzip, deflate, br",
-            "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/84.0.4147.135 Safari/537.36 "
-        }
-    res = requests.post(url=ReadConfig().getValue('Operation', 'Test') + step_info['请求地址'],headers=headers,data=step_info['请求参数(post)'])
-    print(res.json().items())
+# if __name__ == "__main__":
+    # step_info = ReadExcelUtils("Operation").get_data()[0]
+    # headers = {
+    #         "Accept": "application/json, text/plain, */*",
+    #         "Accept-Encoding": "gzip, deflate, br",
+    #         "Content-Type": "application/json",
+    #         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+    #                       "Chrome/84.0.4147.135 Safari/537.36 "
+    #     }
+    # res = requests.post(url=ReadConfig().getValue('Operation', 'Test') + step_info['请求地址'],headers=headers,data=step_info['请求参数(post)'])
+    # print(res.json().items())
 
     # result = CheckUtils(check_response=res)
     # check_type = step_info['期望结果类型']

@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3f89e49d-e095-48b4-9188-3240d9a1724b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/checkUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/checkUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/configUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/configUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/dataUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dataUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/excelUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/excelUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/requestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/requestUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/202009070928.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/202009070932.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/202009070938.log" beforeDir="false" />
@@ -19,14 +24,19 @@
       <change beforePath="$PROJECT_DIR$/log/202009071748.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/202009071749.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/202009071753.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.0/万应工厂自动化测试报告V1.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.1/万应工厂自动化测试报告V1.1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.0/万应工厂自动化测试报告V1.0.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.0/万应工厂自动化测试报告V1.0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.1/万应工厂自动化测试报告V1.1.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.1/万应工厂自动化测试报告V1.1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.2/万应工厂自动化测试报告V1.2.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.3/万应工厂自动化测试报告V1.3.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.4/万应工厂自动化测试报告V1.4.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.5/万应工厂自动化测试报告V1.5.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.6/万应工厂自动化测试报告V1.6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/runner/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/testbase.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/testbase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case_data/testCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test_case_data/testCase.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcode/exchangeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcode/exchangeData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcode/sendrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcode/sendrequest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +54,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eIwRHaT6MCvN18jFEaPPutHVhd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -68,7 +80,7 @@
       <recent name="D:\PychramProject\ONEIN\common" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.runner">
+  <component name="RunManager" selected="Python.sendrequest">
     <configuration name="dataUtils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ONEIN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,29 +103,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="excelUtils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ONEIN" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/excelUtils.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="jsonpathPractice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="exchangeData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ONEIN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,29 +116,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testcode/jsonpathPractice.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ONEIN" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runner" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PychramProject\wanyinggongchang\runner.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testcode/exchangeData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,13 +147,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="time" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ONEIN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testcode/time.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in paramunittestPractice.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ONEIN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcode/paramunittestPractice.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.runner" />
         <item itemvalue="Python.sendrequest" />
-        <item itemvalue="Python.jsonpathPractice" />
+        <item itemvalue="Python.time" />
+        <item itemvalue="Python.exchangeData" />
+        <item itemvalue="Python tests.Unittests in paramunittestPractice.py" />
         <item itemvalue="Python.dataUtils" />
-        <item itemvalue="Python.excelUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +236,12 @@
       <workItem from="1599533081563" duration="774000" />
       <workItem from="1599534034111" duration="753000" />
       <workItem from="1599535325126" duration="204000" />
+      <workItem from="1599544362387" duration="146000" />
+      <workItem from="1599545233284" duration="1213000" />
+      <workItem from="1599549198196" duration="269000" />
+      <workItem from="1599552139605" duration="6521000" />
+      <workItem from="1599623546132" duration="1188000" />
+      <workItem from="1599631609445" duration="8931000" />
     </task>
     <servers />
   </component>
@@ -263,42 +274,46 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1594806299328" />
+    <state x="385" y="15" key="CommitChangelistDialog2" timestamp="1599549462831">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1599549462831" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1595302022397">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595302022397" />
-    <state width="1493" height="264" key="GridCell.Tab.0.bottom" timestamp="1599535295016">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1599638778925">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="264" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599535295016" />
-    <state width="1493" height="264" key="GridCell.Tab.0.center" timestamp="1599535295016">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599638778925" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1599638778925">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="264" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599535295016" />
-    <state width="1493" height="264" key="GridCell.Tab.0.left" timestamp="1599535295016">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599638778925" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1599638778925">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="264" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599535295016" />
-    <state width="1493" height="264" key="GridCell.Tab.0.right" timestamp="1599535295016">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599638778925" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1599638778925">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="264" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599535295016" />
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1594828191945">
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599638778925" />
+    <state width="1493" height="114" key="GridCell.Tab.1.bottom" timestamp="1599559965781">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1594828191945" />
-    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1594828191945">
+    <state width="1493" height="114" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599559965781" />
+    <state width="1493" height="114" key="GridCell.Tab.1.center" timestamp="1599559965781">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1594828191945" />
-    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1594828191945">
+    <state width="1493" height="114" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1599559965781" />
+    <state width="1493" height="114" key="GridCell.Tab.1.left" timestamp="1599559965781">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1594828191945" />
-    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1594828191945">
+    <state width="1493" height="114" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1599559965781" />
+    <state width="1493" height="114" key="GridCell.Tab.1.right" timestamp="1599559965781">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1594828191945" />
+    <state width="1493" height="114" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1599559965781" />
     <state x="58" y="66" key="SettingsEditor" timestamp="1599534125041">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -307,10 +322,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="346" y="35" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1594365924535" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599443261295">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1599630949139">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599443261295" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1599630949139" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_verifyParamunittest_APITest_test_api_common_function.coverage" NAME="Unittests for verifyParamunittest.APITest.test_api_common_function Coverage Results" MODIFIED="1596003413637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
@@ -322,19 +337,21 @@
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_testbase_TestBase.coverage" NAME="Unittests for testbase.TestBase Coverage Results" MODIFIED="1595994100275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/ONEIN$replacePractice.coverage" NAME="replacePractice Coverage Results" MODIFIED="1598867456721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$paramunittest.coverage" NAME="paramunittest验证 Coverage Results" MODIFIED="1595994188205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
+    <SUITE FILE_PATH="coverage/ONEIN$exchangeData.coverage" NAME="exchangeData Coverage Results" MODIFIED="1599635398121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$readExcel_Utils.coverage" NAME="readExcel_Utils Coverage Results" MODIFIED="1595505304039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ONEIN$.coverage" NAME="数据转换 Coverage Results" MODIFIED="1596004383312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$requestHeaders.coverage" NAME="requestHeaders Coverage Results" MODIFIED="1594366733292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_testbase_TestBase_test_case_01.coverage" NAME="Unittests for testbase.TestBase.test_case_01 Coverage Results" MODIFIED="1594717574782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/ONEIN$rePractice.coverage" NAME="rePractice Coverage Results" MODIFIED="1596696877767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
-    <SUITE FILE_PATH="coverage/ONEIN$excelUtils.coverage" NAME="excelUtils Coverage Results" MODIFIED="1599471250402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ONEIN$excelUtils.coverage" NAME="excelUtils Coverage Results" MODIFIED="1599545255122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_paramunittest_TestBase.coverage" NAME="Unittests for testcode.verifyParamunittest.TestBase Coverage Results" MODIFIED="1595994889758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_testbase_TestBase_test_api_common_function.coverage" NAME="Unittests for testbase.TestBase.test_api_common_function Coverage Results" MODIFIED="1595994735918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_verifyParamunittest_APITest.coverage" NAME="Unittests for verifyParamunittest.APITest Coverage Results" MODIFIED="1596003335556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$checkUtils.coverage" NAME="checkUtils Coverage Results" MODIFIED="1598967940992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ONEIN$runner__1_.coverage" NAME="runner (1) Coverage Results" MODIFIED="1599559230019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_in_verifyParamunittest_py.coverage" NAME="Unittests in verifyParamunittest.py Coverage Results" MODIFIED="1596726207869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
-    <SUITE FILE_PATH="coverage/ONEIN$sendrequest.coverage" NAME="sendrequest Coverage Results" MODIFIED="1599472190841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$runner.coverage" NAME="runner Coverage Results" MODIFIED="1599472434184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runner" />
+    <SUITE FILE_PATH="coverage/ONEIN$sendrequest.coverage" NAME="sendrequest Coverage Results" MODIFIED="1599638778916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$jsonpathPractice.coverage" NAME="jsonpathPractice Coverage Results" MODIFIED="1599471767499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_verifyParamunittest_TestBase.coverage" NAME="Unittests for verifyParamunittest.TestBase Coverage Results" MODIFIED="1596003172641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$test.coverage" NAME="test Coverage Results" MODIFIED="1598859144747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
@@ -342,11 +359,13 @@
     <SUITE FILE_PATH="coverage/ONEIN$readConfig.coverage" NAME="readConfig Coverage Results" MODIFIED="1594273602352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ONEIN$connectMongoDB.coverage" NAME="connectMongoDB Coverage Results" MODIFIED="1599047997266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$settings.coverage" NAME="settings Coverage Results" MODIFIED="1595409075610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/ONEIN$time.coverage" NAME="time Coverage Results" MODIFIED="1599638341097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$jsonpath.coverage" NAME="jsonpath使用 Coverage Results" MODIFIED="1596004961131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_in_testbase_py.coverage" NAME="Unittests in testbase.py Coverage Results" MODIFIED="1599442992215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
     <SUITE FILE_PATH="coverage/ONEIN$loginUtils.coverage" NAME="loginUtils Coverage Results" MODIFIED="1598930510109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_for_testbase_TestBase_test_case.coverage" NAME="Unittests for testbase.TestBase.test_case Coverage Results" MODIFIED="1594891995724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_case" />
-    <SUITE FILE_PATH="coverage/ONEIN$dataUtils.coverage" NAME="dataUtils Coverage Results" MODIFIED="1599471398290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ONEIN$dataUtils.coverage" NAME="dataUtils Coverage Results" MODIFIED="1599632234018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ONEIN$Unittests_in_paramunittestPractice_py.coverage" NAME="Unittests in paramunittestPractice.py Coverage Results" MODIFIED="1599632544529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/ONEIN$readTxT.coverage" NAME="readTxT Coverage Results" MODIFIED="1594364779095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ONEIN$Unittests_in_paramunittest_py.coverage" NAME="Unittests in paramunittest学习.py Coverage Results" MODIFIED="1595412403744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcode" />
     <SUITE FILE_PATH="coverage/wanyinggongchang$runner.coverage" NAME="runner Coverage Results" MODIFIED="1599534143955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runner" />

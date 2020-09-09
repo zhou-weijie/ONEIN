@@ -14,7 +14,7 @@ class DataUtils:
     def __init__(self, sheet_name):
         self.testData = ReadExcelUtils(sheet_name).get_data()
 
-    def _getTestCaseData(self):
+    def getTestCaseData(self):
         testCaseDict = {}
         for row_data in self.testData:
             testCaseDict.setdefault(row_data['测试用例编号'], []).append(row_data)
@@ -22,12 +22,12 @@ class DataUtils:
 
     def testCaseDataList(self):
         testCaseList = []
-        for k, v in self._getTestCaseData().items():
+        for k, v in self.getTestCaseData().items():
             one_case_dict = {"case_id": k, "case_info": v}
             testCaseList.append(one_case_dict)
         return tuple(testCaseList)
 
 
-if __name__ == "__main__":
-    testData = DataUtils('Operation').testCaseDataList()
-    print(testData)
+# if __name__ == "__main__":
+#     testData = DataUtils('Operation').getTestCaseData()
+#     print(testData.items())

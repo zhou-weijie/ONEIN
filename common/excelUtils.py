@@ -46,6 +46,6 @@ class ReadExcelUtils:
         return data_list
 
 
-if __name__ == '__main__':
-    ws = ReadExcelUtils('Operation')
-    print(ws.get_data())
+# if __name__ == '__main__':
+#     ws = ReadExcelUtils('Operation')
+#     print(ws.get_data())

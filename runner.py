@@ -1,10 +1,6 @@
 import unittest
 from common import HTMLTestReportCN
 from common.pathUtils import PathUtils
-import os
-# 将当前路径添加为python的临时环境变量
-cur_path = os.path.dirname(os.path.realpath(__file__))
-os.putenv("PYTHONPATH", cur_path)
 
 
 class RunCase:

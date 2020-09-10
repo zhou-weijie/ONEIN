@@ -80,25 +80,44 @@ class RequestUtils:
                     log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
                     return res
             elif case_info["请求方式"] == "POST":
-                if case_info['请求参数(get)'] == '':
-                    res = requests.post(
-                        url=url,
-                        headers=self.headers,
-                        json=ast.literal_eval(case_info.get('请求参数(post)'))
-                    )
-                    res.encoding = res.apparent_encoding
-                    log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
-                    return res
+                if case_info['请求参数(post)'] == '':
+                    if case_info['请求参数(get)'] == '':
+                        res = requests.post(
+                            url=url,
+                            headers=self.headers
+                        )
+                        res.encoding = res.apparent_encoding
+                        log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
+                        return res
+                    else:
+                        res = requests.post(
+                            url=url,
+                            headers=self.headers,
+                            params=case_info['请求参数(get)']
+                        )
+                        res.encoding = res.apparent_encoding
+                        log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
+                        return res
                 else:
-                    res = requests.post(
-                        url=url,
-                        headers=self.headers,
-                        params=case_info['请求参数(get)'],
-                        json=ast.literal_eval(case_info['请求参数(post)'])
-                    )
-                    res.encoding = res.apparent_encoding
-                    log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
-                    return res
+                    if case_info['请求参数(get)'] == '':
+                        res = requests.post(
+                            url=url,
+                            headers=self.headers,
+                            json=ast.literal_eval(case_info.get('请求参数(post)'))
+                        )
+                        res.encoding = res.apparent_encoding
+                        log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
+                        return res
+                    else:
+                        res = requests.post(
+                            url=url,
+                            headers=self.headers,
+                            params=case_info['请求参数(get)'],
+                            json=ast.literal_eval(case_info['请求参数(post)'])
+                        )
+                        res.encoding = res.apparent_encoding
+                        log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
+                        return res
             elif case_info["请求方式"] == "PUT":
                 res = requests.post(
                     url=url,

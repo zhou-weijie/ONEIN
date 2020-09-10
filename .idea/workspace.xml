@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f89e49d-e095-48b4-9188-3240d9a1724b" name="Default Changelist" comment="">
+    <list default="true" id="3f89e49d-e095-48b4-9188-3240d9a1724b" name="Default Changelist" comment="补充之前未上传的一些文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/requestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/requestUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case_data/testCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test_case_data/testCase.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +210,9 @@
       <workItem from="1599552139605" duration="6521000" />
       <workItem from="1599623546132" duration="1188000" />
       <workItem from="1599631609445" duration="8931000" />
-      <workItem from="1599641515957" duration="598000" />
+      <workItem from="1599641515957" duration="894000" />
+      <workItem from="1599643190128" duration="2120000" />
+      <workItem from="1599707213266" duration="2702000" />
     </task>
     <task id="LOCAL-00001" summary="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息">
       <created>1599641738448</created>
@@ -217,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599641738448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="补充之前未上传的一些文件">
+      <created>1599642317260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599642317260</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +239,8 @@
       <path value="$PROJECT_DIR$/web_auto_test" />
     </ignored-roots>
     <MESSAGE value="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息" />
+    <MESSAGE value="补充之前未上传的一些文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充之前未上传的一些文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="79" key="#Options" timestamp="1595295524890">
@@ -251,10 +263,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1594806299328" />
-    <state x="385" y="15" key="CommitChangelistDialog2" timestamp="1599641735821">
+    <state x="385" y="0" key="CommitChangelistDialog2" timestamp="1599642323171">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1599641735821" />
+    <state x="385" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1599642323171" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1595302022397">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -295,10 +307,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="58" y="66" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599642226612" />
-    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1599642259161">
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1599642331727">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599642259161" />
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599642331727" />
     <state x="346" y="35" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594365924535">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

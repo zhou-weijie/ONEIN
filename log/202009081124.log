@@ -1,4 +1,0 @@
-2020-09-08 11:24:40,078 - readExcel - INFO : 打开文件:D:\PychramProject\wanyinggongchang\test_case_data\testCase.xlsx成功！
-2020-09-08 11:24:40,080 - TestBase - INFO : 测试用例[ 1.0登录运营平台 ]开始执行
-2020-09-08 11:24:40,579 - TestBase - INFO : 测试用例[ 2.0登录运营平台，搜索指定应用 ]开始执行
-2020-09-08 11:24:41,902 - TestBase - INFO : 测试用例[ 3.0登录运营平台后免登指定应用 ]开始执行

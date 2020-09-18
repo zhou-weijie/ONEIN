@@ -24,10 +24,11 @@ class DataUtils:
         testCaseList = []
         for k, v in self.getTestCaseData().items():
             one_case_dict = {"case_id": k, "case_info": v}
-            testCaseList.append(one_case_dict)
+            if v[0].get("是否执行"):
+                testCaseList.append(one_case_dict)
         return tuple(testCaseList)
 
 
-# if __name__ == "__main__":
-#     testData = DataUtils('Operation').getTestCaseData()
-#     print(testData.items())
+if __name__ == "__main__":
+    testData = DataUtils('CASE').testCaseDataList()
+    print(testData)

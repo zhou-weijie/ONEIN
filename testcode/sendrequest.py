@@ -1,20 +1,20 @@
 import ast
 import json
 import re
-
 import jsonpath
 import requests
 from common.configUtils import ReadConfig
-from common.excelUtils import ReadExcelUtils
+from common.dataUtils import DataUtils
 from common.requestUtils import RequestUtils
 
 # module_name = input('请输入要执行测试的模块:\n')
 # evn_name = input('请输入测试环境：\n')
-stpe_info = ReadExcelUtils("CASE").get_data()
-re_login = RequestUtils()
-res_login = re_login.sendRequest(stpe_info[0])
-print(res_login)
-
+step_infos = DataUtils("CASE").testCaseDataList()[0].get('case_info')
+print(step_infos)
+myRequest = RequestUtils()
+login_res = myRequest.sendRequest(step_infos[0])
+code_res = myRequest.sendRequest(step_infos[1])
+print(myRequest.temporary_variables)
 # app_id = re_login.sendRequest(stpe_info[7])
 # print(app_id)
 # print(re_login.temporary_variables)

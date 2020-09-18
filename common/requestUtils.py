@@ -26,6 +26,7 @@ import time
 from requests.exceptions import ProxyError, RequestException
 from common.checkUtils import CheckUtils
 from common.configUtils import ReadConfig
+from common.excelUtils import ReadExcelUtils
 from common.logUtils import Logger
 import jsonpath
 
@@ -48,18 +49,18 @@ class RequestUtils:
     def headerUtils(self, case_info):
         if case_info['是否补充请求头']:
             self.headers['authorization'] = self.temporary_variables['type'] + ' ' + self.temporary_variables['access_token']
-            log.info('请求头信息更新，目前请求头信息为：%s' % self.headers)
+            # log.info('请求头信息更新，目前请求头信息为：%s' % self.headers)
         else:
-            log.info('请求头信息保持不变，目前请求头信息为：%s' % self.headers)
+            # log.info('请求头信息保持不变，目前请求头信息为：%s' % self.headers)
             pass
 
     # 获取响应
     def _getResponse(self, case_info):
         self._addTimeStampToTemp()
-        self._setVariable(case_info)
+        self.setVariable(case_info)
         url = ReadConfig().getValue(sec=case_info['请求服务'], option=case_info['请求环境']) + case_info['请求地址']
         self.headerUtils(case_info)
-        log.info('请求方式为：%s\n请求地址为：%s?%s\n请求参数为：%s' % (case_info['请求方式'], url,case_info['请求参数(get)'] , case_info['请求参数(post)']))
+        log.info('请求方式为：%s\n请求地址为：%s?%s\n请求参数为：%s' % (case_info['请求方式'], url, case_info['请求参数(get)'], case_info['请求参数(post)']))
         try:
             if case_info["请求方式"] == "GET":
                 if case_info["请求参数(get)"] == '':
@@ -146,12 +147,12 @@ class RequestUtils:
             log.error('[%s]请求：系统异常，原因：%s' % (case_info["请求地址"], e.__str__()))
 
     # 判断响应是否是json格式
-    def _isJson(self, res):
-        try:
-            json.loads(res.text)
-        except ValueError as e:
-            return False
-        return True
+    # def _isJson(self, res):
+    #     try:
+    #         json.loads(res.text)
+    #     except ValueError as e:
+    #         return False
+    #     return True
 
     # 蒋时间戳作为一个变量，存入temporary_variables字典中
     def _addTimeStampToTemp(self):
@@ -182,41 +183,47 @@ class RequestUtils:
             pass
 
     # 替换变量
-    def _setVariable(self, case_info):
+    def setVariable(self, case_info):
         # 替换url中的变量
         url__variable_list = re.findall('\\${\w+}', case_info['请求地址'])
         if url__variable_list:
             for url__variable in url__variable_list:
                 case_info['请求地址'] = case_info['请求地址'] \
                     .replace(url__variable, self.temporary_variables.get(url__variable[2:-1]))
+                # log.info("将%s替换为%s，替换请求地址成功！" % (url__variable, self.temporary_variables.get(url__variable[2:-1])))
         # 替换请求参数(get)中的变量
         getParam_variable_list = re.findall('\\${\w+}', case_info['请求参数(get)'])
         if getParam_variable_list:
             for getParam_variable in getParam_variable_list:
                 case_info['请求参数(get)'] = case_info['请求参数(get)'] \
                     .replace(getParam_variable, self.temporary_variables.get(getParam_variable[2:-1]))
-        # 替换请求参数(get)中的变量
+                # log.info("将%s替换为%s，替换请求参数(get)成功！" % (getParam_variable, self.temporary_variables.get(getParam_variable[2:-1])))
+        # 替换请求参数(post)中的变量
         postParam_variable_list = re.findall('\\${\w+}', case_info['请求参数(post)'])
         if postParam_variable_list:
             for postParam_variable in postParam_variable_list:
                 case_info['请求参数(post)'] = case_info['请求参数(post)'] \
                     .replace(postParam_variable, self.temporary_variables.get(postParam_variable[2:-1]))
+                # log.info("将%s替换为%s，替换请求参数(post)成功！" % (postParam_variable, self.temporary_variables.get(postParam_variable[2:-1])))
         # 替换取值代码中的变量
         code_variable_list = re.findall('\\${\w+}', case_info['取值代码'])
         if code_variable_list:
             for code_variable in code_variable_list:
                 case_info['取值代码'] = case_info['取值代码'] \
                     .replace(code_variable, self.temporary_variables.get(code_variable[2:-1]))
+                # log.info("将%s替换为%s，替换取值代码成功！" % (code_variable, self.temporary_variables.get(code_variable[2:-1])))
         # 替换期望结果中的变量
         result_variable_list = re.findall('\\${\w+}', case_info['期望结果'])
         if result_variable_list:
-            for result_variable in code_variable_list:
+            for result_variable in result_variable_list:
                 case_info['期望结果'] = case_info['期望结果'] \
                     .replace(result_variable, self.temporary_variables.get(result_variable[2:-1]))
+                # log.info("将%s替换为%s，替换期望结果成功！" % (result_variable, self.temporary_variables.get(result_variable[2:-1])))
 
     def sendRequest(self, case_info):
         res = self._getResponse(case_info)
         self._getTransferVariable(case_info, res)
+        # log.info('此时变量有：%s' % self.temporary_variables)
         result = CheckUtils(res).run_check(case_info['期望结果类型'], case_info['期望结果'])
         return result
 
@@ -230,5 +237,5 @@ class RequestUtils:
 
 
 # if __name__ == "__main__":
-#     case_info = ReadExcelUtils("Operation").get_data()
+#     case_info = ReadExcelUtils("CASE").get_data()
 #     RequestUtils('Operation', 'TEST').request_by_step(case_info)

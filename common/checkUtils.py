@@ -108,8 +108,8 @@ class CheckUtils:
             else:
                 res_list.append('no pass')
                 wrong_items.append(ck_data)
-        # log.info('响应中的items有：{}'.format(self.get_items(self.ck_response.json())))
-        # log.info('期望结果是{}'.format(check_data))
+        log.info('响应中的items有：{}'.format(self.get_items(self.ck_response.json())))
+        log.info('期望结果是{}'.format(check_data))
         if 'no pass' in res_list:
             log.error('用例执行失败，{}校验未通过'.format(wrong_items))
             return self.fail_result

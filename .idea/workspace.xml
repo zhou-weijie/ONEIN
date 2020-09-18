@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f89e49d-e095-48b4-9188-3240d9a1724b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/checkUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/checkUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/dataUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dataUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/requestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/requestUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009081124.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009091608.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/202009091619.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.0/万应工厂自动化测试报告V1.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/万应工厂自动化测试报告V1.1/万应工厂自动化测试报告V1.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_case_data/testCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test_case_data/testCase.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcode/sendrequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcode/sendrequest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +214,7 @@
       <workItem from="1600078029950" duration="2485000" />
       <workItem from="1600136271311" duration="14264000" />
       <workItem from="1600410458060" duration="12539000" />
-      <workItem from="1600426976706" duration="182000" />
+      <workItem from="1600426976706" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="优化了以下几点：&#10;1.优化requestUtils中的请求参数格式&#10;2.优化调用链，避免重复调用&#10;3.配置文件读取的信息不再手动输入，而是存放至测试用例中&#10;4.在入参中新增一个时间戳变量，参数名称为timestamp&#10;5.优化日志打印信息">
       <created>1599641738448</created>
@@ -254,7 +244,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600155286358</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.增加了跳过用例的功能&#10;2.修复无法替换期望结果中变量的问题">
+      <created>1600427198973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600427198973</updated>
+    </task>
+    <task id="LOCAL-00006" summary="同步workspace.xml文件的内容">
+      <created>1600427285876</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600427285876</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,9 +272,15 @@
     <MESSAGE value="补充之前未上传的一些文件" />
     <MESSAGE value="修改了一些requestUtils中的代码，增加了对post参数为空时的校验" />
     <MESSAGE value="1.支持对响应子节点进行断言&#10;2.增加了测试用例" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.支持对响应子节点进行断言&#10;2.增加了测试用例" />
+    <MESSAGE value="1.增加了跳过用例的功能&#10;2.修复无法替换期望结果中变量的问题" />
+    <MESSAGE value="同步workspace.xml文件的内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="同步workspace.xml文件的内容" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Notifications" timestamp="1600427397116">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1600427397116" />
     <state x="361" y="79" key="#Options" timestamp="1595295524890">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -291,10 +301,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="167" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1594806299328" />
-    <state x="44" y="0" width="1452" height="804" key="CommitChangelistDialog2" timestamp="1600427210907">
+    <state x="44" y="0" width="1452" height="804" key="CommitChangelistDialog2" timestamp="1600427409897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="44" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600427210907" />
+    <state x="44" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600427409897" />
     <state x="44" y="10" width="1452" height="804" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1599732013675" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1595302022397">
       <screen x="0" y="0" width="1536" height="834" />
@@ -340,10 +350,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="58" y="66" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599642226612" />
-    <state x="361" y="151" key="Vcs.Push.Dialog.v2" timestamp="1600427241671">
+    <state x="361" y="151" key="Vcs.Push.Dialog.v2" timestamp="1600427299735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600427241671" />
+    <state x="361" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600427299735" />
     <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599732030994" />
     <state x="346" y="35" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594365924535">
       <screen x="0" y="0" width="1536" height="834" />

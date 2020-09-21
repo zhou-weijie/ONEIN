@@ -17,7 +17,7 @@ def setVariable(step_info):
             print(stpe_info)
 
 
-stpe_info = ReadExcelUtils("Operation").get_data()
+stpe_info = ReadExcelUtils("CASE").get_data()
 setVariable(stpe_info[2])
 
 
@@ -66,7 +66,7 @@ setVariable(stpe_info[2])
 # str2 = '$..access_token,$..auth'
 # str1 = """appid":"(.+?)","subapp;"subappid":"(.+?)","nex"""
 # str2 = 'appid;subappid'
-# #
+#
 # list1 = str1.split(';')
 # print(list1)
 # list2 = str2.split(';')

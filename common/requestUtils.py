@@ -57,7 +57,7 @@ class RequestUtils:
     # 获取响应
     def _getResponse(self, case_info):
         self._addTimeStampToTemp()
-        self.setVariable(case_info)
+        self._setVariable(case_info)
         url = ReadConfig().getValue(sec=case_info['请求服务'], option=case_info['请求环境']) + case_info['请求地址']
         self.headerUtils(case_info)
         log.info('请求方式为：%s\n请求地址为：%s?%s\n请求参数为：%s' % (case_info['请求方式'], url, case_info['请求参数(get)'], case_info['请求参数(post)']))
@@ -183,7 +183,7 @@ class RequestUtils:
             pass
 
     # 替换变量
-    def setVariable(self, case_info):
+    def _setVariable(self, case_info):
         # 替换url中的变量
         url__variable_list = re.findall('\\${\w+}', case_info['请求地址'])
         if url__variable_list:

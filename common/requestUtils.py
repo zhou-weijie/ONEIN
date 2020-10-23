@@ -58,6 +58,7 @@ class RequestUtils:
     def _getResponse(self, case_info):
         self._addTimeStampToTemp()
         self._setVariable(case_info)
+        # log.info("取值代码为：%s" % case_info['取值代码'])
         url = ReadConfig().getValue(sec=case_info['请求服务'], option=case_info['请求环境']) + case_info['请求地址']
         self.headerUtils(case_info)
         log.info('请求方式为：%s\n请求地址为：%s?%s\n请求参数为：%s' % (case_info['请求方式'], url, case_info['请求参数(get)'], case_info['请求参数(post)']))
@@ -94,7 +95,7 @@ class RequestUtils:
                         res = requests.post(
                             url=url,
                             headers=self.headers,
-                            params=case_info['请求参数(get)']
+                            params=ast.literal_eval(case_info['请求参数(get)'])
                         )
                         res.encoding = res.apparent_encoding
                         log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
@@ -113,14 +114,14 @@ class RequestUtils:
                         res = requests.post(
                             url=url,
                             headers=self.headers,
-                            params=case_info['请求参数(get)'],
+                            params=ast.literal_eval(case_info['请求参数(get)']),
                             json=ast.literal_eval(case_info['请求参数(post)'])
                         )
                         res.encoding = res.apparent_encoding
                         log.info('响应状态码为：%s\n响应信息为：%s' % (res.status_code, res.text))
                         return res
             elif case_info["请求方式"] == "PUT":
-                res = requests.post(
+                res = requests.put(
                     url=url,
                     headers=self.headers,
                     params=case_info['请求参数(get)'],
@@ -173,10 +174,18 @@ class RequestUtils:
         elif case_info["取值方式"] == "正则取值":
             try:
                 get_value_code_list = case_info["取值代码"].split(";")
+                # log.info('get_value_code_list = %s' % get_value_code_list)
                 transfer_value_variable_list = case_info["传值变量"].split(";")
+                # log.info('transfer_value_variable_list = %s' % transfer_value_variable_list)
                 for i in range(0, len(get_value_code_list)):
-                    value = re.findall(get_value_code_list[i], res.text)[-1]
-                    self.temporary_variables[transfer_value_variable_list[i]] = value
+                    # log.info('i = %d' % i)
+                    # log.info("取值代码为：%s" % get_value_code_list[i])
+                    try:
+                        value = re.findall(get_value_code_list[i], res.text)[-1]
+                        # log.info('value = %s' % value)
+                        self.temporary_variables[transfer_value_variable_list[i]] = value
+                    except IndexError as e:
+                        log.error("无法依据正则表达式匹配到值")
             except Exception as e:
                 log.error("发生错误，%s" % e)
         elif case_info["取值方式"] == "无":
@@ -197,14 +206,16 @@ class RequestUtils:
             for getParam_variable in getParam_variable_list:
                 case_info['请求参数(get)'] = case_info['请求参数(get)'] \
                     .replace(getParam_variable, self.temporary_variables.get(getParam_variable[2:-1]))
-                # log.info("将%s替换为%s，替换请求参数(get)成功！" % (getParam_variable, self.temporary_variables.get(getParam_variable[2:-1])))
+                # log.info("将%s替换为%s，替换请求参数(get)成功！" % (getParam_variable, self.temporary_variables.get(
+                # getParam_variable[2:-1])))
         # 替换请求参数(post)中的变量
         postParam_variable_list = re.findall('\\${\w+}', case_info['请求参数(post)'])
         if postParam_variable_list:
             for postParam_variable in postParam_variable_list:
                 case_info['请求参数(post)'] = case_info['请求参数(post)'] \
                     .replace(postParam_variable, self.temporary_variables.get(postParam_variable[2:-1]))
-                # log.info("将%s替换为%s，替换请求参数(post)成功！" % (postParam_variable, self.temporary_variables.get(postParam_variable[2:-1])))
+                # log.info("将%s替换为%s，替换请求参数(post)成功！" % (postParam_variable, self.temporary_variables.get(
+                # postParam_variable[2:-1])))
         # 替换取值代码中的变量
         code_variable_list = re.findall('\\${\w+}', case_info['取值代码'])
         if code_variable_list:
@@ -218,13 +229,17 @@ class RequestUtils:
             for result_variable in result_variable_list:
                 case_info['期望结果'] = case_info['期望结果'] \
                     .replace(result_variable, self.temporary_variables.get(result_variable[2:-1]))
-                # log.info("将%s替换为%s，替换期望结果成功！" % (result_variable, self.temporary_variables.get(result_variable[2:-1])))
+                # log.info("将%s替换为%s，替换期望结果成功！" % (result_variable, self.temporary_variables.get(result_variable[
+                # 2:-1])))
 
     def sendRequest(self, case_info):
+        log.info("开始执行步骤%s：%s" % (case_info['测试用例步骤'], case_info['接口描述']))
         res = self._getResponse(case_info)
         self._getTransferVariable(case_info, res)
         # log.info('此时变量有：%s' % self.temporary_variables)
         result = CheckUtils(res).run_check(case_info['期望结果类型'], case_info['期望结果'])
+        if not result.get('check_result'):
+            log.error("步骤\"%s:%s\"执行失败" % (case_info['测试用例步骤'], case_info['接口描述']))
         return result
 
     def request_by_step(self, case_infos):

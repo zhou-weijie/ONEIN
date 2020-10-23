@@ -93,7 +93,7 @@ class CheckUtils:
         # log.info('响应中的keys有：{}'.format(self.get_keys(self.ck_response.json())))
         # log.info('期望结果是{}'.format(check_data))
         if 'no pass' in res_list:
-            log.error('用例执行失败，{}校验未通过'.format(wrong_key))
+            # log.error('用例执行失败，{}校验未通过'.format(wrong_key))
             return self.fail_result
         else:
             return self.pass_result
@@ -108,10 +108,10 @@ class CheckUtils:
             else:
                 res_list.append('no pass')
                 wrong_items.append(ck_data)
-        log.info('响应中的items有：{}'.format(self.get_items(self.ck_response.json())))
-        log.info('期望结果是{}'.format(check_data))
+        # log.info('响应中的items有：{}'.format(self.get_items(self.ck_response.json())))
+        # log.info('期望结果是{}'.format(check_data))
         if 'no pass' in res_list:
-            log.error('用例执行失败，{}校验未通过'.format(wrong_items))
+            # log.error('用例执行失败，{}校验未通过'.format(wrong_items))
             return self.fail_result
         else:
             return self.pass_result
@@ -121,7 +121,7 @@ class CheckUtils:
         if re.findall(pattern=pattern, string=self.ck_response.text):
             return self.pass_result
         else:
-            log.error('用例执行失败，%s校验未通过' % check_data)
+            # log.error('用例执行失败，%s校验未通过' % check_data)
             return self.fail_result
 
     def run_check(self, check_type=None, check_data=None):
